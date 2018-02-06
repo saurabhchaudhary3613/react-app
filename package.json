@@ -1,33 +1,29 @@
 {
   "name": "react-app",
   "version": "1.0.0",
-  "description": "Workshop React & Redux",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
     "build": "webpack --config webpack.prod.config.js  --progress",
+    "node-server": "nodemon server",
     "start": "webpack-dev-server --config webpack.config.js --hot --inline --open"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/nodesense/react-app.git"
-  },
-  "keywords": [
-    "react",
-    "redux",
-    "redux-thunk"
-  ],
-  "author": "Gopalakrishnan Subramani",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/nodesense/react-app/issues"
-  },
-  "homepage": "https://gitlab.com/nodesense/react-app#README",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "faker": "^4.1.0",
+    "json-server": "^0.10.1",
+    "jsonfile": "^3.0.1",
+    "jwt-simple": "^0.5.1",
+    "lowdb": "^0.16.2",
+    "minimist": "^1.2.0",
     "core-js": "^2.5.1",
     "immutable": "^3.8.1",
     "jquery": "^3.2.1",
-    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
@@ -43,7 +39,9 @@
     "redux-thunk": "^2.2.0",
     "rxjs": "^5.4.3",
     "socket.io": "^2.0.3",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -56,18 +54,23 @@
     "bootstrap": "^4.0.0",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.7",
+    "css-loader": "^0.28.9",
     "enzyme": "^2.9.1",
-    "extract-text-webpack-plugin": "^3.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "fetch-mock": "^5.12.2",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^21.0.1",
     "jsdom": "^11.2.0",
+    "lodash": "^4.17.5",
+    "node-sass": "^4.7.2",
     "popper": "^1.0.1",
+    "raw-loader": "^0.5.1",
     "react-test-renderer": "^15.6.1",
+    "redux-saga": "^0.16.0",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.6",
+    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.7.1"
   }
 }

@@ -1,11 +1,11 @@
-import { QUIZ_QUESTIONS } from '../constants/constants'
+import { QUIZ_QUESTIONS } from '../constant'
 
 export const getData = () => (
     new Promise(function(resolve, reject) {
         fetch(QUIZ_QUESTIONS)
         .then((response) => response.json())
         .then((res) => {
-            const data = res.quiz
+            const data = res.data
             setTimeout(() => resolve(data), 500)
         })
         .catch((error) => {

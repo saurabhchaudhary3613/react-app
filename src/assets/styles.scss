@@ -1,0 +1,216 @@
+/*
+    * Quiz application CSS
+*/
+
+$app-bg: #eaeaea;
+$app-blue: #0030ff;
+$white: #FFFFFF;
+
+.container-fluid {
+    background: $app-bg;
+    padding: 0;
+}
+.quiz-header {
+    width: 100%;
+    padding: 20px 0;
+    background: $app-blue;
+    text-align: center;
+    margin-bottom: 60px;
+    .text {
+        width: 14%;
+        background:$app-blue;
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 18px;
+        color: $white;
+        letter-spacing: 6px;
+        line-height: 24px;
+    }
+}
+
+
+.main-container {
+    
+    width: 100%;
+    display: inline-block;
+
+    article.first {
+        margin-top: 45px;
+    }
+
+    article {
+        margin-top: 45px;
+        float: left;
+        width: 100%;
+        position: relative;
+        margin-bottom: 45px;
+    }
+
+}
+
+
+.que-container {
+    width: 40.55%;
+    margin: 0 28.22%;
+    float: left;
+    position: absolute;
+    top: -38px;
+
+    .que-number {
+        background:$app-blue;
+        float: left;
+        font-family: Gotham-Bold;
+        font-size: 18px;
+        color: $white;
+        letter-spacing: 0;
+        padding: 15px;
+    }
+
+    .que-text {
+        float: left;
+        width: 84%;
+        background: $white;
+        padding: 18px;
+        font-family: Gotham-Medium;
+        font-size: 16px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 20px;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,0.20);
+    }
+
+}
+
+.que-options {
+    background: $white;
+    width: 36.55%;
+    float: left;
+    margin: 0 31%;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding: 39px 0 29px 35px;
+        background: $white;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,0.20);
+
+        li{
+            font-family: Gotham-Medium;
+            font-size: 16px;
+            color: #333333;
+            letter-spacing: 0;
+            margin-bottom: 15px;
+            span{
+                font-family: Gotham-Medium;
+                font-size: 16px;
+                color: #333333;
+                letter-spacing: 0;
+                margin-left: 10px;
+            }
+        }
+        
+    }
+}
+
+.submit-btn-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+}
+.glypho {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+.popup {
+    margin: 70px auto;
+    color: $white;
+    background: $app-blue;
+    border: 8px solid $white;
+    width: 31.3%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    .close {
+        position: absolute;
+        top: -4px;
+        right: 0px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+        &:hover {
+            color: #06D85F;
+        }
+    }
+    .content {
+        width: 80%;
+        p {
+            margin: 0;
+            text-align: center;
+            &.total-score {
+                font-family: Gotham-Bold;
+                font-size: 42px;
+                color: #FFFFFF;
+                letter-spacing: 2px;
+                padding-top: 21.39%;
+                padding-bottom: 1.85%;
+                padding-left: 18%;
+            }
+            &.right-wrong-answers {
+                font-family: Gotham-Medium;
+                font-size: 16px;
+                color: $white;
+                letter-spacing: 0;
+                line-height: 20px;
+                padding-right: 17.57%;
+                padding-left: 34.57%;
+                &:nth-child(2){
+                    padding-bottom: 3.90%;
+                }
+                &:nth-child(3) {
+                    padding-bottom: 12.54%;
+                }
+            }
+        }
+    }
+    .score-header {
+        text-align: center;
+        font-size: 18px;
+        color: #0030ff;
+        letter-spacing: 6px;
+        line-height: 24px;
+        background: #FFFFFF;
+        position: absolute;
+        padding: 28px 21px;
+        left: 25.9%;
+        font-size: 18px;
+        color: #0030ff;
+        letter-spacing: 6px;
+        line-height: 24px;
+        top: -17%;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

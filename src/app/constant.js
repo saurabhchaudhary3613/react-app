@@ -1,1 +1,10 @@
-export const QUIZ_QUESTIONS = "QUIZ_QUESTIONS";
+export const API_URL ='http://localhost:8081/'
+export const QUIZ_QUESTIONS = API_URL + 'quiz'
+export const HEADER ='GENERAL KNOWLEDGE'
+export const GET_DATA_SUCCESS ='GET_DATA_SUCCESS'
+export const GET_DATA_REQUEST = 'GET_DATA_REQUEST'
+export const GET_DATA_FAILURE = 'GET_DATA_FAILURE'
+export const SUBMIT_DATA_REQUEST = 'SUBMIT_DATA_REQUEST'
+export const SUBMIT_DATA_SUCCESS = 'SUBMIT_DATA_SUCCESS'
+export const SUBMIT_DATA_FAILURE = 'SUBMIT_DATA_FAILURE'
+export const CLOSE_MODAL = 'CLOSE_MODAL';

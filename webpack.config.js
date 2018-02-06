@@ -7,6 +7,8 @@ var BUILD_DIR = path.resolve(__dirname, 'dist');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 var config = {
   
@@ -35,6 +37,12 @@ var config = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.(css|sass|scss)$/,
+        use: ExtractTextPlugin.extract({
+          use: ['raw-loader', 'sass-loader'],
+        })
       }
     ]
   },
@@ -51,6 +59,7 @@ var config = {
       VERSION: JSON.stringify("1.0.0"),
       PRODUCTION: JSON.stringify("false")
     }),
+
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         filename: 'vendor.bundle.js',
@@ -60,11 +69,17 @@ var config = {
         },
     }),
 
-      new HtmlWebpackPlugin({
-        title: 'My Product App',
-        filename: 'index.html', //output file name
-        template: './src/index.html' //input file
-      })
+    new HtmlWebpackPlugin({
+      title: 'My Product App',
+      filename: 'index.html', //output file name
+      template: './src/index.html' //input file
+    }),
+
+    
+    new ExtractTextPlugin('dist/styles/style.css', {
+        allChunks: true
+    })
+
 
     
   ],
